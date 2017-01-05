@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="injectionService" class="com.ltx.test3.InjectionServiceImpl">-->
+    <!--<property name="injectionDao" ref="injectionDao"/>-->
+    <!--</bean>-->
+
+    <!--Bean的作用域 scope，bean的生命周期stop，在此不会结束 -->
+    <bean id="injectionService" class="com.ltx.test3.InjectionServiceImpl"
+          scope="prototype" init-method="start" destroy-method="stop">
+        <constructor-arg name="injectionDao" ref="injectionDao"/>
+    </bean>
+
+    <bean id="injectionDao" class="com.ltx.test3.InjectDaoImpl"/>
+
+</beans>
