@@ -1,6 +1,7 @@
 package annotation;
 
-import com.annotation.bean.StoreConfig;
+import com.annotation.bean.MyDriverManager;
+import com.annotation.bean.Store;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
@@ -11,13 +12,20 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class bean extends UnitTestBase {
     public bean() {
-        super("classpath:annotation-bean.xml");
+        super("classpath*:annotation-bean.xml");
     }
 
     @Test
     public void testSay() {
-        StoreConfig store = super.getBean("getStringStore");
+//        Store store = super.getBean("getStringStore");
+        Store store = super.getBean("stringStore");
         System.out.println(store.getClass().getName());
+    }
+
+    @Test
+    public void testManager() {
+        MyDriverManager myDriverManager = super.getBean("myDriverManager");
+        System.out.println(myDriverManager.getClass().getName());
     }
 
 }
