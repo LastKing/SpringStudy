@@ -3,7 +3,7 @@ package com.annotation.bean;
 /**
  * Created by Rain on 2017/1/6.
  */
-public class StringStore implements Store {
+public class StringStore implements Store<String> {
 
     public void init() {
         System.out.println("This is init");

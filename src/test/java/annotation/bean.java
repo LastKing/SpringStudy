@@ -28,4 +28,18 @@ public class bean extends UnitTestBase {
         System.out.println(myDriverManager.getClass().getName());
     }
 
+    @Test
+    public void testScope() {
+        Store store = super.getBean("stringStore");
+        System.out.println(store.hashCode());
+
+        Store store2 = super.getBean("stringStore");
+        System.out.println(store2.hashCode());
+    }
+
+    @Test
+    public void testG() {
+        Store store = super.getBean("stringStoreTest");
+    }
+
 }
