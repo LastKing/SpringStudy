@@ -18,9 +18,14 @@ public class BeanInvoker {
     @Autowired
     private Map<String, BeanInterface> map;
 
-    @Autowired
-    @Qualifier("beanImplOne")
+    //    @Autowired
+//    @Qualifier("beanImplOne")
     private BeanInterface beanInterface;
+
+    @Autowired
+    public void setBeanInterface(@Qualifier("beanImplOne") BeanInterface beanInterface) {
+        this.beanInterface = beanInterface;
+    }
 
     public void say() {
         if (null != list) {
