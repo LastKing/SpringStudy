@@ -1,5 +1,6 @@
 package aop;
 
+import com.aop.schema.advice.Fit;
 import com.aop.schema.advice.biz.AspectBiz;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +27,12 @@ public class AOPSchemaAdvice extends UnitTestBase {
     public void testInit() {
         AspectBiz biz = super.getBean("aspectBiz");
         biz.init("test", 34);
+    }
+
+    @Test
+    public void testFit() {
+        Fit fit = super.getBean("aspectBiz");
+        fit.filter();
     }
 
 }

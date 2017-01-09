@@ -39,9 +39,9 @@
 
         <!-- 动态代理 依赖。。可能 需要aop:point 切入时使用？未确定  -->
         <dependency>
-            <groupId>org.apache.geronimo.bundles</groupId>
+            <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.6.8_2</version>
+            <version>1.8.9</version>
         </dependency>
 
         <dependency>
