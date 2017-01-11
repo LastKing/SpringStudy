@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
+import java.util.Date;
+
 /**
  * Created by Rain on 2017/1/9.
  */
